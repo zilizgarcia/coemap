@@ -1,0 +1,19 @@
+[build]
+  command = "npm run generate"
+  publish = "dist"
+  functions = ".output/server"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NITRO_PRESET = "netlify"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
