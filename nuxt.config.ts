@@ -27,5 +27,10 @@ export default defineNuxtConfig({
     transpile: ['@heroicons/vue']
   },
 
-  compatibilityDate: '2024-11-30'
+  compatibilityDate: '2024-11-30',
+
+  typescript: {
+    typeCheck: false,
+    shim: false
+  }
 })

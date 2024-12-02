@@ -18,23 +18,11 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 defineProps({
-  name: {
-    type: String,
-    required: true
-  },
-  location: {
-    type: String,
-    required: true
-  },
-  image: {
-    type: String,
-    required: true
-  },
-  featured: {
-    type: Boolean,
-    default: false
-  }
+  name: { type: String, required: true },
+  location: { type: String, required: true },
+  image: { type: String, required: true },
+  featured: { type: Boolean, default: false }
 })
 </script>
