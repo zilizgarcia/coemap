@@ -17,3 +17,7 @@ body {
 .card {
   @apply bg-white rounded-lg shadow-md p-6;
 }
+
+.nav-link {
+  @apply inline-flex items-center px-1 pt-1 text-sm font-medium text-primary-600 hover:text-primary-500 transition-colors duration-200;
+}

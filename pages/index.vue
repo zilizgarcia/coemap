@@ -11,9 +11,11 @@
                 <span class="block text-indigo-600">momentos difíciles</span>
               </h1>
               <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                En MindCare, entendemos lo difícil que puede ser lidiar con problemas emocionales y de salud mental. 
-                Ya sea que te sientas abrumado por la ansiedad, el estrés, o simplemente necesites un espacio donde 
-                puedas encontrar recursos útiles, estamos aquí para ayudarte.
+                Bienvenidos al Centro de Orientación y Empoderamiento para Mujeres Afectadas por la Violencia (COEMAV). 
+                Aquí encontrarás un espacio seguro y profesional dedicado a ofrecer apoyo emocional, psicológico y social 
+                para superar las heridas del abuso y empoderarte en cada paso de tu recuperación. Creemos en tu fortaleza 
+                y trabajamos contigo para transformar el dolor en esperanza, construyendo juntos un camino hacia la 
+                sanación y una vida plena. Tu bienestar es nuestra prioridad.
               </p>
               <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div class="rounded-md shadow">
