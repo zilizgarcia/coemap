@@ -1,11 +1,11 @@
 [build]
-  command = "NITRO_PRESET=netlify npm run build"
-  publish = ".output/public"
+  command = "npm run generate"
+  publish = "dist"
   functions = ".output/server"
 
 [build.environment]
   NODE_VERSION = "18"
-  NPM_FLAGS = "--version"
+  NITRO_PRESET = "netlify"
 
 [[redirects]]
   from = "/*"
