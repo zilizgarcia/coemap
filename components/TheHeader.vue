@@ -29,8 +29,13 @@
 
 <script setup>
 import { useEmergencyServices } from '~/composables/useEmergencyServices'
+import { ref } from 'vue'
+import { useAuthStore } from '~/stores/auth'
+import { useRouter } from 'vue-router'
 
 const { toggleEmergencyMode } = useEmergencyServices()
+const authStore = useAuthStore()
+const isMenuOpen = ref(false)
 
 const navigationLinks = [
   { name: 'Home', path: '/' },
@@ -39,6 +44,11 @@ const navigationLinks = [
   { name: 'Blog', path: '/blog' },
   { name: 'Contact', path: '/contact' }
 ]
+
+const handleLogout = async () => {
+  authStore.logout()
+  router.push('/')
+}
 </script>
 
 <style scoped>

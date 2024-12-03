@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Funciones auxiliares
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isVerified() {
+      return isAuthenticated() && request.auth.token.email_verified;
+    }
+
+    // Reglas para la colección users
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isOwner(userId);
+      allow update: if isOwner(userId);
+      allow delete: if false; // No permitir eliminación de usuarios
+    }
+
+    // Reglas para otros datos del usuario
+    match /users/{userId}/preferences/{document=**} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // Reglas por defecto - denegar todo lo demás
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+} 

@@ -14,9 +14,23 @@
             <NuxtLink to="/resources" class="nav-link">Recursos</NuxtLink>
             <NuxtLink to="/testimonials" class="nav-link">Testimonios</NuxtLink>
             <NuxtLink to="/contact" class="nav-link">Contacto</NuxtLink>
-            <NuxtLink to="/profile" class="nav-link flex items-center">
-              <span>Mi Perfil</span>
-            </NuxtLink>
+            
+            <!-- Botón condicional basado en el estado de autenticación -->
+            <template v-if="authStore.isAuthenticated">
+              <div class="relative">
+                <NuxtLink to="/profile" class="nav-link flex items-center">
+                  <span>Mi Perfil</span>
+                </NuxtLink>
+                <button @click="handleLogout" class="nav-link text-red-600 hover:text-red-500">
+                  Cerrar Sesión
+                </button>
+              </div>
+            </template>
+            <template v-else>
+              <NuxtLink to="/auth/login" class="nav-link flex items-center">
+                <span>Iniciar Sesión</span>
+              </NuxtLink>
+            </template>
           </div>
         </div>
       </div>
@@ -69,6 +83,19 @@
     </footer>
   </div>
 </template>
+
+<script setup>
+import { useAuthStore } from '~/stores/auth'
+import { useRouter } from 'vue-router'
+
+const authStore = useAuthStore()
+const router = useRouter()
+
+const handleLogout = async () => {
+  await authStore.logout()
+  router.push('/')
+}
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');

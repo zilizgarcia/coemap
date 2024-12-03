@@ -1,0 +1,6 @@
+{
+    "aicontext.personalContext": "We are developing a website, please take into account the general functioning of the site, external tools as well as external services and their compatibility when generating the code, always make sure that the changes made do not generate errors and do not modify anything beyond what is necessary. If you need data, information or files from the user, let us know.",
+    "editor.defaultFoldingRangeProvider": "anysphere.cursor-shadow-workspace",
+    "editor.defaultFormatter": "anysphere.cursor-shadow-workspace",
+    "npm.enableRunFromFolder": true
+}

@@ -9,11 +9,13 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "@heroicons/vue": "^2.2.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
-    "@pinia/nuxt": "^0.5.1",
+    "@pinia/nuxt": "^0.5.5",
+    "firebase": "^11.0.2",
     "nuxt": "^3.13.0",
-    "pinia": "^2.1.7"
+    "pinia": "^2.2.8"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",

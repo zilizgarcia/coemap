@@ -4,5 +4,9 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"testing.defaultGutterClickAction": "contextMenu",
+		"notebook.defaultFormatter": "aestheticintegration.iml-vscode",
+		"npm.enableRunFromFolder": true
+	}
 }
